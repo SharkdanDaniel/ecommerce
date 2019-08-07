@@ -10,6 +10,7 @@ class Page {
 	private $options = [];
 	private $defaults = [
 		"data"=>[]
+
 	];
 
 	public function __construct($opts = array()){
@@ -46,7 +47,7 @@ class Page {
 
 		$this->setData($data);
 
-		return $this->tpl->draw($name, $returnHTML);
+		$this->tpl->draw($name, $returnHTML);
 
 	}
 

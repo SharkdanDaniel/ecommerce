@@ -4,9 +4,13 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit3ba4410edaffe17b4aefc1948d4fb833
+class ComposerStaticInitcdc21685a46e78182762104e6485eeed
 {
     public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
         'H' => 
         array (
             'Hcode\\' => 6,
@@ -14,6 +18,10 @@ class ComposerStaticInit3ba4410edaffe17b4aefc1948d4fb833
     );
 
     public static $prefixDirsPsr4 = array (
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'Hcode\\' => 
         array (
             0 => __DIR__ . '/..' . '/hcodebr/php-classes/src',
@@ -37,24 +45,12 @@ class ComposerStaticInit3ba4410edaffe17b4aefc1948d4fb833
         ),
     );
 
-    public static $classMap = array (
-        'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
-        'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
-        'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
-        'PHPMailerOAuthGoogle' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
-        'POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.pop3.php',
-        'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
-        'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
-        'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit3ba4410edaffe17b4aefc1948d4fb833::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit3ba4410edaffe17b4aefc1948d4fb833::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit3ba4410edaffe17b4aefc1948d4fb833::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit3ba4410edaffe17b4aefc1948d4fb833::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcdc21685a46e78182762104e6485eeed::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcdc21685a46e78182762104e6485eeed::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitcdc21685a46e78182762104e6485eeed::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
